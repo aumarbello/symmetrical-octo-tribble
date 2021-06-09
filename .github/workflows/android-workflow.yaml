@@ -4,7 +4,7 @@ on: [push]
 jobs:
   build-and-test:
     name: Build and run tests
-    runs-on: ubuntu latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout codebase
         uses: actions/checkout@v1
@@ -14,3 +14,5 @@ jobs:
           java-version: 1.8
       - name: Print Dir contents
         run: ls -la
+      - name: Run Unit tests
+        run: ./gradlew testDebugUnitTest
