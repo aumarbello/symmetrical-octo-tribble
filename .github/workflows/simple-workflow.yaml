@@ -17,4 +17,4 @@ jobs:
       - build
     runs-on: ubuntu-latest
     steps:
-      run: echo "It is $(date)"
+     - run: echo "It is $(date)"
