@@ -1,0 +1,20 @@
+name: Simple Calculator Flow
+
+on: [push]
+
+jobs:
+  build:
+    name: Greet
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello world
+        run: echo Hell World
+
+  time:
+    name: Print time
+
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      run: echo "It is $(date)"
