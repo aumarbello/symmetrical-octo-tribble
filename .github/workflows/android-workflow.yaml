@@ -1,0 +1,16 @@
+name: CI Workflow
+on: [push]
+
+job:
+  build-and-test:
+    name: Build and run tests
+    runs-on: ubuntu latest
+    steps:
+      - name: Checkout codebase
+        uses: actions/checkout@v1
+      - name: JDK set up
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Print Dir contents
+        run: ls -la
